@@ -1,18 +1,17 @@
 // A system package containing protocol access constructs
 // Package objects referenced with 'http:' in code
 import ballerina/http;
-
-documentation {
-   A service endpoint represents a listener.
-}
 endpoint http:Listener listener {
-    port:9090
+    port: 9090
 };
 
 documentation {
    A service is a network-accessible API
    Advertised on '/hello', port comes from listener endpoint
 }
+
+
+
 service<http:Service> hello bind listener {
 
     documentation {
@@ -23,6 +22,10 @@ service<http:Service> hello bind listener {
        P{{caller}} Server Connector
        P{{request}} Request
     }
+
+
+
+
     sayHello (endpoint caller, http:Request request) {
 
         // Create object to carry data back to caller
