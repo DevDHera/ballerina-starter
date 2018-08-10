@@ -10,8 +10,6 @@ documentation {
    Advertised on '/hello', port comes from listener endpoint
 }
 
-
-
 service<http:Service> hello bind listener {
 
     documentation {
@@ -22,9 +20,6 @@ service<http:Service> hello bind listener {
        P{{caller}} Server Connector
        P{{request}} Request
     }
-
-
-
 
     sayHello (endpoint caller, http:Request request) {
 
